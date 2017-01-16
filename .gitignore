@@ -1,0 +1,12 @@
+*~
+*.idea
+*.log*
+*.out
+*.pid
+*.pyc
+*.pyd
+*.pyo
+*.sqlite3
+*.*.orig
+dump.json
+/static/
