@@ -13,9 +13,9 @@ if HOST_NAME in LIVE_BOXES:
 else:
     DEBUG = True
 
-SECRET_KEY = os.getenv("REPORTS_SECRET_KEY")
-SQL_PASSWORD = os.getenv("REPORTS_SQL_PASSWORD")
-SQL_USER = os.getenv("REPORTS_SQL_USER")
+SECRET_KEY = os.getenv("SECRET_KEY")
+SQL_PASSWORD = os.getenv("SQL_PASSWORD")
+SQL_USER = os.getenv("SQL_USER")
 SMTP_SERVER = os.getenv("SMTP_SERVER")
 
 # Logs

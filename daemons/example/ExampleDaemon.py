@@ -3,7 +3,7 @@ import time
 import traceback
 
 from common import constants, logging_util
-from daemons.common.Daemon import Daemon
+from daemons.common.Daemon2 import Daemon
 
 
 class ExampleDaemon(Daemon):

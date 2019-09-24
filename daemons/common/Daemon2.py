@@ -1,5 +1,5 @@
 """
-Based on code from, http://www.jejik.com/articles/2007/02/a_simple_unix_linux_daemon_in_python/
+Python 2
 """
 from abc import ABCMeta
 from abc import abstractmethod
