@@ -15,7 +15,7 @@ import sys
 import time
 
 
-class Daemon(object):
+class Daemon:
     """
     A generic daemon class for Python 3.x.x
 
