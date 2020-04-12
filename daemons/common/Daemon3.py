@@ -5,8 +5,7 @@ This was created using several examples from the net.
 Here is where they all started:
 http://web.archive.org/web/20131025230048/http://www.jejik.com/articles/2007/02/a_simple_unix_linux_daemon_in_python/
 """
-from abc import ABCMeta
-from abc import abstractmethod
+from abc import ABCMeta, abstractmethod
 import atexit
 import errno
 import os
@@ -17,7 +16,7 @@ import time
 
 class Daemon:
     """
-    A generic daemon class for Python 3.x.x
+    A generic daemon class for Python 3
 
     Usage: subclass the Daemon class and override the run() method
     """

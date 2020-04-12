@@ -10,5 +10,5 @@ import django
 from common import constants
 
 sys.path.append(os.path.abspath(constants.PYTHON_PROJECT_PATH))
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "my_project.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", constants.SETTINGS)
 django.setup()

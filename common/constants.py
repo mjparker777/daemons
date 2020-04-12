@@ -2,6 +2,16 @@ import os
 import socket
 
 # ****************************************
+# Daemons
+# ****************************************
+
+DAEMON_SLEEP_TIME = 5
+
+# pids
+DAEMON_BASE_DIR = "/my_project/daemons"  # path for the daemon pids
+PID_EXAMPLE_DAEMON = os.path.join(DAEMON_BASE_DIR, "example/daemon.pid")
+
+# ****************************************
 # Server
 # ****************************************
 
@@ -14,22 +24,12 @@ else:
     DEBUG = True
 
 SECRET_KEY = os.getenv("SECRET_KEY")
+SETTINGS = "my_project.settings"
+SMTP_SERVER = os.getenv("SMTP_SERVER")
 SQL_PASSWORD = os.getenv("SQL_PASSWORD")
 SQL_USER = os.getenv("SQL_USER")
-SMTP_SERVER = os.getenv("SMTP_SERVER")
 
 # Logs
 LOG_DIR = "/var/log/my_project/"
-
-# ****************************************
-# Daemons
-# ****************************************
-
-DAEMON_SLEEP_TIME = 5
-
-# pids
-DAEMON_BASE_DIR = "/x/local/my_project/daemons"  # path for the daemon pids
-# noinspection PyUnresolvedReferences
-PID_EXAMPLE_DAEMON = os.path.join(DAEMON_BASE_DIR, "example/daemon.pid")
 
 # ****************************************

@@ -1,6 +1,8 @@
 """
 Use this to enable python logging
 
+    from common import logging_util
+
     # Setup daemon logging
     daemon_name = "ExampleDaemon"
     self.logger = logging_util.get_logger(daemon_name)
@@ -49,7 +51,7 @@ LOGGING_CONF = {
             'class': 'logging.handlers.RotatingFileHandler',
             'level': 'DEBUG',
             'formatter': 'verbose',
-            'filename': '<NEED TO SET PATH/FILENAME>',
+            'filename': '<PATH/FILENAME SET USING function::get_logger()>',
             'mode': 'a',
             'maxBytes': 1024 * 1024 * 100,  # 100 MB
             'backupCount': 4,
@@ -62,7 +64,7 @@ LOGGING_CONF = {
             'mailhost': constants.SMTP_SERVER,
             'fromaddr': "someone@something.com",
             'toaddrs': ["someone1@something.com", "someone2@something.com", ],
-            'subject': '<NEED TO SET SUBJECT>',
+            'subject': '<SUBJECT SET USING function::get_logger()>',
         },
     },
     'loggers': {

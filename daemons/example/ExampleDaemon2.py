@@ -2,6 +2,8 @@ import sys
 import time
 import traceback
 
+from django import db
+
 from common import constants, logging_util
 from daemons.common.Daemon2 import Daemon
 
@@ -39,13 +41,16 @@ class ExampleDaemon(Daemon):
                 self._run_task_one()
                 # Daemon task 2
                 self._run_task_two()
+            except db.utils.OperationalError as err:
+                self._logger.error("{0}\n{1}".format(type(err), traceback.format_exc()))
+                db.connection.close()
             except Exception as err:
                 self._logger.critical("{0}\n{1}".format(type(err), traceback.format_exc()))
 
 
 daemon = ExampleDaemon(constants.PID_EXAMPLE_DAEMON)
 # Check to see if we're running under the debugger,
-#   if we are then bypass the daemonize and just run directly.
+#   If we are then bypass the daemonize and just run directly.
 if sys.gettrace() is not None:
     daemon.run()
 else:
