@@ -25,7 +25,7 @@ else:
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 SETTINGS = "my_project.settings"
-SMTP_SERVER = os.getenv("SMTP_SERVER")
+
 SQL_PASSWORD = os.getenv("SQL_PASSWORD")
 SQL_USER = os.getenv("SQL_USER")
 
