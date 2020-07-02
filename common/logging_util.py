@@ -1,7 +1,8 @@
 """
-Use this to enable python logging
+Use this to enable logging outside of Django
 
-    from common import logging_util
+Example usage:
+from common.django_needed import logging_util
 
     # Setup daemon logging
     daemon_name = "ExampleDaemon"
@@ -9,13 +10,13 @@ Use this to enable python logging
     self.logger.debug('This is a debug message in the daemon log.')
 
     # Switch to log with a different name and do a roll over
-    logger = logging_util.set_logger_config("job_log_name")
+    logging_util.set_logger_config("job_log_name")
     logger.debug('This is a debug message in the job log.')
     logging_util.force_log_rollover(logger) # start with a clean log
     logger.error('This is an error message in a new job log.')
 
     # Switch back to daemon logging
-    logger = logging_util.set_logger_config(daemon_name)
+    logging_util.set_logger_config(daemon_name)
     logger.debug('This is a debug message in the daemon log.')
 """
 from copy import deepcopy
