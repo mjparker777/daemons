@@ -3,7 +3,7 @@ Python 3
 
 This was created using several examples from the net.
 Here is where they all started:
-http://web.archive.org/web/20131025230048/http://www.jejik.com/articles/2007/02/a_simple_unix_linux_daemon_in_python/
+http://www.jejik.com/articles/2007/02/a_simple_unix_linux_daemon_in_python/
 """
 from abc import ABCMeta, abstractmethod
 import atexit
