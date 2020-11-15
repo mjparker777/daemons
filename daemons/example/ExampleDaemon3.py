@@ -5,14 +5,14 @@ import traceback
 from django import db
 
 from common import constants, logging_util
-from daemons.Daemon2 import Daemon
+from daemons.Daemon3 import Daemon
 
 
-class ExampleDaemon2(Daemon):
+class ExampleDaemon3(Daemon):
     def __init__(self, pidfile):
-        super(ExampleDaemon2, self).__init__(pidfile=pidfile)
+        super().__init__(pidfile=pidfile)
 
-        self._daemon_name = "ExampleDaemon2"
+        self._daemon_name = "ExampleDaemon3"
         self._logger = logging_util.get_logger(self._daemon_name)
 
     def _run_task_one(self):
@@ -48,7 +48,7 @@ class ExampleDaemon2(Daemon):
             time.sleep(int(constants.DAEMON_SLEEP_TIME))
 
 
-daemon = ExampleDaemon2(constants.PID_EXAMPLE_DAEMON)
+daemon = ExampleDaemon3(constants.PID_EXAMPLE_DAEMON)
 # Check to see if we're running under the debugger,
 #   If we are then bypass the daemonize and just run directly.
 if sys.gettrace() is not None:
